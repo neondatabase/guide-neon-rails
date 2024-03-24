@@ -1,0 +1,10 @@
+<!-- app/views/authors/index.html.erb -->
+
+<h1>Authors</h1>
+<ul>
+  <% @authors.each do |author| %>
+    <li>
+      <%= author.name %> - <%= author.country %> - <%= link_to 'Books', author_books_path(author_id: author.id) %>
+    </li>
+  <% end %>
+</ul>
